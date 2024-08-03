@@ -21,10 +21,38 @@ const notFoundError = (message = "Not found") => {
     error.status = 403;
     return error;
   };
-  
-  export default {
+
+  const conflictError = (message = "Conflict") => {
+    const error = new Error(message);
+    error.status = 409;
+    return error;
+};
+
+const goneError = (message = "Gone") => {
+    const error = new Error(message);
+    error.status = 410;
+    return error;
+};
+
+const unprocessableEntityError = (message = "Unprocessable Entity") => {
+    const error = new Error(message);
+    error.status = 422;
+    return error;
+};
+
+const internalServerError = (message = "Internal Server Error") => {
+    const error = new Error(message);
+    error.status = 500;
+    return error;
+};
+
+export default {
     notFoundError,
     badRequestError,
     unauthorizedError,
-    forbiddenError
+    forbiddenError,
+    conflictError,
+    goneError,
+    unprocessableEntityError,
+    internalServerError
   };
