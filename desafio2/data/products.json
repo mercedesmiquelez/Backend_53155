@@ -1,0 +1,29 @@
+[
+    {
+        "id": 2,
+        "title": "Producto 2",
+        "description": "el segundo producto",
+        "price": 800,
+        "thumbnail": "http://www.google.com",
+        "code": "ABC124",
+        "stock": 10
+    },
+    {
+        "id": 3,
+        "title": "Producto 4",
+        "description": "el cuarto producto",
+        "price": 400,
+        "thumbnail": "http://www.google.com",
+        "code": "ABC125",
+        "stock": 10
+    },
+    {
+        "id": 4,
+        "title": "Producto 5",
+        "description": "el quinto producto",
+        "price": 900,
+        "thumbnail": "http://www.google.com",
+        "code": "ABC126",
+        "stock": 2
+    }
+]
