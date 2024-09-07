@@ -25,7 +25,7 @@ describe("Test products", () => {
 
     let productId;
 
-    it("[POST] /api/products este endpoint debe crear un producto", async () => {
+    it("[POST] /api/products this endpoint creates a product", async () => {
         const newProduct = {
             title: "Producto Test",
             description: "Este es un producto Test",
@@ -55,7 +55,7 @@ describe("Test products", () => {
         expect(ok).to.be.equal(true);
     });
 
-    it("[GET] /api/products/:pid este endpoint debe devolver un producto", async () => {
+    it("[GET] /api/products/:pid this endpoint returns a product", async () => {
         const { status, _body, ok } = await requester.get(`/api/products/${productId}`);
 
         expect(status).to.be.equal(200);
@@ -100,7 +100,7 @@ describe("Test products", () => {
         expect(_body.payload.category).to.equal("category test updated");
     });
 
-    it("[DELETE] /api/products/:pid este endpoint debe eliminar un producto", async () => {
+    it("[DELETE] /api/products/:pid this endpoint must delete a product", async () => {
         const { status, _body, ok } = await requester
             .delete(`/api/products/${productId}`)
             .set("Cookie", [`${cookie.name}=${cookie.value}`]);
